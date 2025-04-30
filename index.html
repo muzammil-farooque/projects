@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expanse Managemnet System   </title>
+    <meta name="description" content="This is the page where you find Your quiz Of Html">
+    <title>SMIT QUIZ APPLICATION</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <body>
-      <div class="container">
-        <h2>Expense Manager</h2>
-        <input type="text" id="desc" placeholder="Description" />
-        <input type="number" id="amount" placeholder="Amount" />
-        <select id="category">
-          <option value="Food">Food</option>
-          <option value="Travel">Travel</option>
-          <option value="Bills">Bills</option>
-          <option value="Shopping">Shopping</option>
-        </select>
-        <button onclick="addExpense()">Add Expense</button>
-    
-        <div class="expense-list" id="expenseList"></div>
-        <div class="summary" id="summary"></div>
-      </div>
-    
-      <script src="app.js">
-        
-      </script>
-    </body>
-    </html>
-    
+
+<body>
+
+    <div class="quiz-container">
+        <h1>Quiz Application SMIT</h1>
+        <hr><br>
+
+        <div>
+            <div>
+                <p id="ques">Question appears here...</p>
+            </div>
+
+            <div class="option">
+                <input onclick="btnWork()" type="radio" name="quiz" id="opt1-radio">
+                <label id="opt1" for="opt1-radio">Option 1</label>
+            </div>
+
+            <div class="option">
+                <input onclick="btnWork()" type="radio" name="quiz" id="opt2-radio">
+                <label id="opt2" for="opt2-radio">Option 2</label>
+            </div>
+
+            <div class="option">
+                <input onclick="btnWork()" type="radio" name="quiz" id="opt3-radio">
+                <label id="opt3" for="opt3-radio">Option 3</label>
+            </div>
+
+        </div>
+        <br><br>
+
+        <button id="btn" disabled onclick="nextQuestion()">Next</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
 
 </body>
+
 </html>
